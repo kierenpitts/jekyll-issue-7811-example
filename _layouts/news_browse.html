@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Browse news</title>
+  </head>
+  <body>
+    <h1>Browse news</h1>
+
+  <p>All the months with news items are listed below:-</p>
+  <ul>
+    {% for month in page.monthlist %}
+    <li>
+      <a href="/news/{{ month[0] }}.html">{{ month[1] }}</a>
+    </li>
+    {% endfor %}
+  <ul>
+
+  </body>
+</html>

@@ -1,0 +1,16 @@
+# Welcome to Jekyll!
+#
+
+title: Test site
+email: someone@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Test site for examining Jekyll issue #7811
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.example.org"
+
+host: 0.0.0.0
+
+# Build settings
+timezone: Europe/London
+# Publish posts with a future date (needed for the events listings)
+future: TRUE

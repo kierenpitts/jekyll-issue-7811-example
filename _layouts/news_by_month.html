@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>News items for {{ page.monthdate }}</title>
+  </head>
+  <body>
+    <h1>{{ page.monthdate }}</h1>
+
+  <p>All the news items for {{ page.monthdate }}:-</p>
+  <ul>
+    {% for post in page.monthposts %}
+    <li>
+      <strong>{{ post.date | date: '%d %B %Y' }}</strong><br />
+      <a href="{{ post.permalink }}">{{ post.title }}</a><br />
+      {{ post.excerpt | strip_html | truncate: 15 }}
+    </li>
+    {% endfor %}
+  <ul>
+
+  </body>
+</html>
