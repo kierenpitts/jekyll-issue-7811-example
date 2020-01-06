@@ -6,7 +6,7 @@ The problem turned out to be the fact that the two subclasses did not set a `rel
 
 The current code in this **example** addresses this by explicitly setting a `relative_path` in each subclass so that the key clash does not occur. The code in its original form can be found using the tag: `pre-fix`
 
-Many thanks to @ashmaroli for help with this issue and for making suggestions on how to improve the plugin code - for example, this plugin could be improved by caching the layout as a class constant and not reading it each time.
+Many thanks to [@ashmaroli](https://github.com/ashmaroli) for help with this issue and for making suggestions on how to improve the plugin code - for example, this plugin could be improved by caching the layout as a class constant and not reading it each time.
 
 
 # Original README text - Possible Jekyll bug related to #7811
