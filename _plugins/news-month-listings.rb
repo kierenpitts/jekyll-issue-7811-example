@@ -71,16 +71,17 @@ module Jekyll
   class NewsItemPage < Page
     def initialize(site, outfile, listingdate, monthposts)
       """
-      Create an individual page for each month of news
+      Create individual pages for each month of news
       """
       @site = site
       @outfile  = outfile
-
+      @relative_path = @outfile
       self.process(@outfile)
       self.read_yaml(File.join(@site.source, '_layouts'), 'news_by_month.html')
       self.data['title'] = listingdate + " news archive"
       self.data['monthdate'] = listingdate
       self.data['monthposts'] =  monthposts[0]
+      #self.data['relative_path'] = @outfile
     end
   end
 
@@ -91,7 +92,7 @@ module Jekyll
       """
       @site = site
       @nice_dates = nice_dates
-
+      @relative_path = '/news/browse.html'
       self.process('/news/browse.html')
       self.read_yaml(File.join(@site.source, '_layouts'), 'news_browse.html')
       self.data['title'] = "Browse news archive"
