@@ -8,6 +8,8 @@ The current code in this **example** addresses this by explicitly setting a `rel
 
 Many thanks to [@ashmaroli](https://github.com/ashmaroli) for help with this issue and for making suggestions on how to improve the plugin code - for example, this plugin could be improved by caching the layout as a class constant and not reading it each time.
 
+The code in this repository was just an example and should not be used but the cache discussion and solution to the problem *may* help others.
+
 
 # Original README text - Possible Jekyll bug related to #7811
 
