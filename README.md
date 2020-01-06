@@ -2,7 +2,7 @@
 
 It turns out that this was **not** a bug related to issue [#7811](https://github.com/jekyll/jekyll/issues/7811).
 
-The problem turned out to be the fact that the two subclasses did not set a `relative_path`. Jekyll 4's Liquid cache uses the `relative_path` (the path to the content source file on the file system) as the key in the cache. As this plugin generates pages that do not have a corresponding file on the file system the `relative_path` defaults to an empty string. As a result, the key for the `NewsListingsPage` matched the entry in the cache that was created when pages of the `NewsItemPage` subclass were created. Consequently the original Liquid layout from the cache was used instead.
+The problem turned out to be the fact that the two subclasses did not set a `relative_path`. Jekyll 4's Liquid cache uses the `relative_path` (the path to the content source file on the file system) as the key in the cache. As this plugin generates pages that do not have a corresponding file on the file system I did not set a `relative_path` and this defaults to an empty string. As a result, the key for the `NewsListingsPage` matched the entry in the cache that was created when pages of the `NewsItemPage` subclass were created. Consequently the original Liquid layout from the cache was used instead.
 
 The current code in this **example** addresses this by explicitly setting a `relative_path` in each subclass so that the key clash does not occur. The code in its original form can be found using the tag: `pre-fix`
 
